@@ -1,25 +1,20 @@
-import os
+import os 
 import urllib2
 import json
 
 while True:
-		ip = raw_input("What Your Target IP : ")
-		url = "https://ipinfo.io/"
-		response = urllib2.urlopen(url + ip)
-		data = response.read()
-		values = json.loads(data)
-
-		print("------------------------------------")
-		print "\r"
-		print(" IP           :  " + values['ip'])
-		print(" City         :  " + values['city'])
-		print(" Region       :  " + values['region'])
-		print(" Country      :  " + values['country_name'])
-		print(" Continent    :  " + values['continent_name'])
-		print(" Time Zone    :  " + values['time_zone'])
-		print(" Currency     :  " + values['currency'])
-		print(" Calling Code :  " + "+" + values['calling_code'])
-		print(" Organisation :  " + values['organisation'])
-		print(" ASN          :  " + values['asn'])
-		print "\r"
-		break
+    ip = input("Enter Your Target Ip Address >> ")
+    url = "http://ip-api.com/json"
+    response = urllib2.urlopen(url + str(ip))
+    data = response.read()
+    values = json.loads(data)
+    print("IP: " + values['query'])
+    print("Contiinent >> " + values['continent'])
+    print("Country >> " + values['country'])
+    print("Region >> " + values['regionName'])
+    print("City >> " + values['city'])
+    print("Zip >> " + values['zip'])
+    print("Latitude >> " + values['lat'])
+    print("Longitude >> " + values['lon'])
+    print("ISP >> " + values['isp'])
+    
