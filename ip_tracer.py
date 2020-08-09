@@ -2,6 +2,11 @@ import os
 import urllib2
 import json
 
+def author():
+    print("Tool Is Created By Krishna Pranav")
+    print("Github Link https://www.github.com/krishpranav")
+    print("Do not forget to follow me :)")
+    
 while True:
     ip = input("Enter Your Target Ip Address >> ")
     url = "http://ip-api.com/json"
@@ -17,4 +22,4 @@ while True:
     print("Latitude >> " + values['lat'])
     print("Longitude >> " + values['lon'])
     print("ISP >> " + values['isp'])
-    
+author()
