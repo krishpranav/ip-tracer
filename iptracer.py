@@ -56,3 +56,10 @@ try:
     print(red+"-----------------"+red)
     print (a, "[Zip code]:", data['zip'])
     print (" "+yellow)
+
+except KeyboardInterrupt:
+    print('Bye :)'+lgreen)
+    sys.exit(0)
+except requests.exceptions.ConnectionError as e:
+    print (red+"[+]"+" check your internet connection!"+clear)
+    sys.exit(1)
